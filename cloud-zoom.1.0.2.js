@@ -370,6 +370,9 @@
                     $('#' + data.useZoom).data('zoom').destroy();
                     // Change the biglink to point to the new big image.
                     $('#' + data.useZoom).attr('href', event.data.attr('href'));
+                    // Change alt and title of image.
+                    $('#' + data.useZoom + ' img').attr('title', event.data.find('img').attr('title'));
+                    $('#' + data.useZoom + ' img').attr('alt', event.data.find('img').attr('alt'));
                     // Change the small image to point to the new small image.
                     $('#' + data.useZoom + ' img').attr('src', event.data.data('relOpts').smallImage);
                     // Init a new zoom with the new images.				
